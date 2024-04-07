@@ -38,7 +38,7 @@ services:
     image: apache/apisix-dashboard
     restart: always
     volumes:
-      - ./apisix_dashboard_conf/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml
+      - ./apisix-dashboard_conf/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml
     depends_on:
       - apisix
     ports:
