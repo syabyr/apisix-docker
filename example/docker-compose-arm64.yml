@@ -87,6 +87,7 @@ services:
       - NGINX_PORT=80
     networks:
       apisix:
+
   prometheus:
     image: prom/prometheus:v2.25.0
     restart: always
