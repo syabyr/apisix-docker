@@ -16,6 +16,7 @@
 #
 
 apisix:
+  extra_lua_path: "/opt/?.lua"    ## recursive search path?
   node_listen: 9080              # APISIX listening port
   enable_ipv6: false
 
@@ -49,3 +50,11 @@ plugin_attr:
     export_addr:
       ip: "0.0.0.0"
       port: 9091
+  myplugin:
+    key: "value"
+
+plugins:
+  - myplugin
+  - prometheus
+  - echo
+  - file-proxy      # for test file proxy plugin
